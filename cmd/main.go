@@ -4,10 +4,12 @@ import (
 	"fmt"
 
 	"app.com/domain/internal/domain/processevents"
+	repository "app.com/domain/internal/infra/EventRepository"
 )
 
 func main() {
-	repository := processevents.EventRepository{}
+	repository := repository.EventRepository{}
+
 	eventUseCase := processevents.ProcessEventsUC{}
 	eventUseCase.Setup(&repository)
 

@@ -1,4 +1,6 @@
-package processevents
+package repository
+
+import "app.com/domain/internal/domain/processevents"
 
 // type Input struct {
 // 	Uid   string
@@ -31,8 +33,8 @@ type EventRepository struct {
 //			Value: 1000,
 //		}
 //	}
-func (t *EventRepository) GetEvent(Input Input) Output {
-	return Output{
+func (t *EventRepository) GetEvent(Input processevents.Input) processevents.Output {
+	return processevents.Output{
 		Uid:   "Maycao Ufes",
 		Value: 1000,
 	}
